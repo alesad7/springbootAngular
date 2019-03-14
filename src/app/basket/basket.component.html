@@ -1,0 +1,14 @@
+<input type="button" routerLink="/addOrder" href="#" class="myButton" value="add"/>
+
+<ul>
+  <li *ngFor="let hero of orders">
+    <div class="listElement"> {{ hero.basketId }} </div>
+    <div class="listElement"> {{ hero.deliveryDate}} </div>
+    <div class="listElement"> {{ hero.products }} </div>
+    <div class="listButtonsContainer">
+      <input type="button" (click)="removeOrder(hero.basketId)" class="myButton" value="remove"/>
+      <input type="button" (click)="putIdIntoLocalStorage(hero.basketId)" routerLink="/editOrder" href="#"
+             class="myButton" value="edit"/>
+    </div>
+  </li>
+</ul>

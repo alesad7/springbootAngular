@@ -1,0 +1,21 @@
+<div>
+  <h2>Product data edition</h2>
+  <label>Product name</label>
+  <input type="text" [(ngModel)]="name" placeholder="Product name..">
+
+  <label>Product price</label>
+  <input type="text" [(ngModel)]="price" placeholder="Product price..">
+
+  <label>Producer</label>
+  <select [(ngModel)]="producer" id="producer" name="producer">
+    <option value="australia">Australia</option>
+    <option value="canada">Canada</option>
+    <option value="usa">USA</option>
+  </select>
+
+  <input type="checkbox" [(ngModel)]="isCrueltyFree" name="isCrueltyFree" value="Product is cruelty free">
+  <label>Product is cruelty free</label>
+
+
+  <input type="button" value="Edit product" (click)="onSubmit()">
+</div>

@@ -1,0 +1,20 @@
+<div>
+  <h2>Add product</h2>
+  <label>Product name</label>
+  <input type="text" [(ngModel)]="name" placeholder="Product name..">
+
+  <label>Product price</label>
+  <input type="text" [(ngModel)]="price" placeholder="Product price..">
+
+  <label>Producer</label>
+  <select [(ngModel)]="producer" id="producer" name="producer">
+    <option value="producer">Producer</option>
+    <option value="producer1">Producer1</option>
+    <option value="producer2">Producer2</option>
+  </select>
+
+  <input type="checkbox" [(ngModel)]="isCrueltyFree" name="isCrueltyFree" value="Product is cruelty free">
+  <label>Product is cruelty free</label>
+
+  <input type="button" value="Add product" (click)="onSubmit()">
+</div>

@@ -1,0 +1,16 @@
+<input type="button" routerLink="/addProduct" href="#" class="myButton" value="add"/>
+
+<ul>
+  <li *ngFor="let hero of products | paginate: {itemsPerPage: 3, currentPage:p}">
+    <div class="listElement"> {{ hero.productName }} </div>
+    <div class="listElement"> {{ hero.id}} </div>
+    <div class="listElement"> {{ hero.productPrice.toFixed(2) }} </div>
+    <div class="listButtonsContainer">
+      <input type="button" (click)="removeProduct(hero.id)" class="myButton" value="remove"/>
+      <input type="button" (click)="putIdIntoLocalStorage(hero.id)" routerLink="/editProduct" href="#" class="myButton"
+             value="edit"/>
+
+    </div>
+  </li>
+  <pagination-controls (pageChange)=" p = $event"></pagination-controls>
+</ul>
